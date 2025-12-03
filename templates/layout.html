@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header> 
+        <nav>Navigation</nav>
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        
+        {% if user.is_authenticated %}
+            <a href="{% url 'services' %}">services</a>
+
+            <form action=" {% url 'userlogout' %} " method="post">
+                {% csrf_token %}
+                <button>Logout</button>
+            </form>
+        
+        {% else %}
+            <a href="{% url 'loginpage' %}">login</a>
+            <a href="{% url 'registerpage' %}">register</a>
+        
+        {% endif %}
+
+
+
+
+    </header>
+    
+    <main>
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+    <footer>
+        <p>All rights reserved</p>
+    </footer>
+</body>
+</html>

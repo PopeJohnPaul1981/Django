@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block main %}
+
+ <div>
+      <h4 style="margin-left:30 ;">About Us</h4>
+      <div style="margin-left:30 ;">JP-Technology is a leading Information Technology (IT) firm dedicated to training aspiring software developers in the art of building responsive and interactive websites. Our comprehensive programs cover both front-end and back-end web development, equipping learners with the essential skills needed to excel in the modern tech industry.
+On the front-end, we provide hands-on training in HTML5, CSS, JavaScript, Bootstrap, React, and Python, enabling our students to design dynamic and user-friendly interfaces. For the back-end, we offer in-depth instruction in MySQL, PHP, and MongoDB, ensuring a strong foundation in server-side programming and database management.
+At JP-Technology, we are committed to empowering individuals with practical, industry-relevant skills that prepare them for successful careers in web development.
+</div>
+<div class='container'>
+  <div class='row'>
+
+    <div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 350">
+  <img src=" {% static 'images/developer3.jpg' %} " class="card-img-top" alt="..." />
+  <div class="card-body">
+    <p class="card-text mx-3">Our Students</p>
+    </div>
+  </div>
+  </div>
+
+ <div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 350">
+  <img src=" {% static 'images/developer4.jpg' %} " class="card-img-top" alt="..." />
+  <div class="card-body">
+    <p class="card-text mx-3">Our Professional developers</p>
+    </div>
+  </div>
+  </div>
+
+   <div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 350">
+  <img src=" {% static 'images/developer1.jpg' %} " class="card-img-top" alt="..." />
+  <div class="card-body">
+    <p class="card-text mx-3">A meeting with clients</p>
+    </div>
+  </div>
+  </div>
+ 
+<p style="margin-top:30"> 
+<h3 style="margin-left:50">Courses offered</h3>
+</p>
+<div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 300">
+  <h5>FRONTEND DEVELOPMENT</h5>
+ <ol type='1'>
+    <li>Html5</li>
+    <li>Css</li>
+    <li>Javascript</li>
+    <li>React Native</li>
+    <li>Tailwind</li>
+  </ol>
+ </div>
+ </div>
+  
+<div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 300">
+  <h5>BACKTEND/DATABASE</h5>
+ <ol type='1'>
+    <li>MySQL</li>
+    <li>PHP</li>
+    <li>MongoDB</li>
+    <li>Python</li>
+    <li>Node.js</li>
+  </ol>
+ </div>
+ </div>
+
+<div class="col-sm-4">
+<div class="card mt-3 mx-3 " style="width: 300">
+  <h5>MOBILE APP DEV.</h5>
+ <ol type='1'>
+    <li>Python</li>
+    <li>ES6</li>
+    <li>Javascript</li>
+    <li>React Native</li>
+    <li>Java</li>
+  </ol>
+ </div>
+ </div>
+
+
+ </div>
+ </div>
+
+
+</div>
+
+{% endblock main %}
+
+
+
+
+
